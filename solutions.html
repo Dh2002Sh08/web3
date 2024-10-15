@@ -1,0 +1,300 @@
+<html><head><base href="solutions.html">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoAI: Innovative E-Waste Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body, html {
+            font-family: 'Roboto', sans-serif;
+            background-color: #0a0a0a;
+            color: #e0e0e0;
+            overflow-x: hidden;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            background: linear-gradient(45deg, #1a1a1a, #2a2a2a);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2em;
+            color: #4CAF50;
+            text-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+        }
+        .nav-links a {
+            color: #e0e0e0;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        .nav-links a:hover {
+            color: #4CAF50;
+        }
+        .hero {
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: url('/a/444e7f6c-fd0e-44d9-ab0e-8c697123fb55') no-repeat center center;
+            background-size: cover;
+            position: relative;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+        }
+        .hero-content {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        .hero-content h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            font-family: 'Orbitron', sans-serif;
+            color: #4CAF50;
+            text-shadow: 0 0 20px rgba(76, 175, 80, 0.7);
+        }
+        .section {
+            padding: 80px 0;
+        }
+        .section h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-align: center;
+            font-family: 'Orbitron', sans-serif;
+            color: #4CAF50;
+        }
+        .solutions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .solution-card {
+            background: linear-gradient(45deg, #1a1a1a, #2a2a2a);
+            border-radius: 10px;
+            padding: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .solution-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(76, 175, 80, 0.2);
+        }
+        .solution-card h3 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: #4CAF50;
+        }
+        .solution-card p {
+            font-size: 1em;
+            line-height: 1.6;
+        }
+        .tech-stack {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .tech-tag {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8em;
+        }
+        #impact-visualization {
+            height: 400px;
+            background: #1a1a1a;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5em;
+            color: #4CAF50;
+            margin-top: 50px;
+        }
+        footer {
+            background: #1a1a1a;
+            padding: 20px 0;
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2em;
+            }
+            .solutions-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">E-Wate-DECENTRALIZED</div>
+            <div class="nav-links">
+                <a href="home.html">Home</a>
+                <a href="solutions.html">Solutions</a>
+                <a href="reuse.html">Reuse</a>
+                <a href="feedback.html">Feedback</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Innovative E-Waste Solutions</h1>
+        </div>
+    </section>
+
+    <section id="ai-solutions" class="section">
+        <div class="container">
+            <h2>AI-Powered E-Waste Management</h2>
+            <div class="solutions-grid">
+                <div class="solution-card">
+                    <h3>Smart Sorting System</h3>
+                    <p>Our AI-driven sorting system uses computer vision and machine learning to accurately identify and categorize e-waste components, optimizing the recycling process.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Computer Vision</span>
+                        <span class="tech-tag">Machine Learning</span>
+                        <span class="tech-tag">IoT Sensors</span>
+                    </div>
+                </div>
+                <div class="solution-card">
+                    <h3>Predictive Maintenance</h3>
+                    <p>Utilize AI to predict when electronic devices are nearing end-of-life, enabling proactive measures for repair, upgrade, or responsible disposal.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Predictive Analytics</span>
+                        <span class="tech-tag">Big Data</span>
+                        <span class="tech-tag">Edge Computing</span>
+                    </div>
+                </div>
+                <div class="solution-card">
+                    <h3>Material Recovery Optimization</h3>
+                    <p>Our AI algorithms analyze the composition of e-waste to determine the most efficient and environmentally friendly methods for recovering valuable materials.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Deep Learning</span>
+                        <span class="tech-tag">Chemical Analysis</span>
+                        <span class="tech-tag">Process Optimization</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="web3-solutions" class="section">
+        <div class="container">
+            <h2>Web3 and Decentralized Strategies</h2>
+            <div class="solutions-grid">
+                <div class="solution-card">
+                    <h3>Blockchain Traceability</h3>
+                    <p>Implement a blockchain-based system to track the entire lifecycle of electronic devices, ensuring transparency and accountability in the e-waste management process.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Blockchain</span>
+                        <span class="tech-tag">Smart Contracts</span>
+                        <span class="tech-tag">DLT</span>
+                    </div>
+                </div>
+                <div class="solution-card">
+                    <h3>Tokenized Recycling Incentives</h3>
+                    <p>Create a decentralized reward system using cryptocurrency tokens to incentivize individuals and businesses to participate in e-waste recycling programs.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Tokenomics</span>
+                        <span class="tech-tag">DeFi</span>
+                        <span class="tech-tag">Gamification</span>
+                    </div>
+                </div>
+                <div class="solution-card">
+                    <h3>Decentralized Marketplace</h3>
+                    <p>Develop a peer-to-peer platform for trading refurbished electronics and recycled materials, promoting a circular economy in the tech sector.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">dApps</span>
+                        <span class="tech-tag">Smart Contracts</span>
+                        <span class="tech-tag">Decentralized Identity</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="impact" class="section">
+        <div class="container">
+            <h2>Environmental Impact Visualization</h2>
+            <div id="impact-visualization">
+                Interactive Chart: E-Waste Reduction Projections
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>E-Wate-DECENTRALIZED Revolutionizing E-Waste Management. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.from(".hero-content", {
+            duration: 1,
+            y: 50,
+            opacity: 0,
+            ease: "power3.out"
+        });
+
+        gsap.from(".solution-card", {
+            duration: 1,
+            y: 50,
+            opacity: 0,
+            stagger: 0.2,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".solutions-grid",
+                start: "top 80%"
+            }
+        });
+
+        // Simple impact visualization placeholder
+        const impactViz = document.getElementById('impact-visualization');
+        let currentYear = 2023;
+        let wasteReduction = 0;
+
+        function updateImpactViz() {
+            currentYear++;
+            wasteReduction += Math.random() * 10000;
+            impactViz.innerHTML = `
+                Year: ${currentYear}<br>
+                E-Waste Reduction: ${Math.round(wasteReduction)} tons
+            `;
+        }
+
+        setInterval(updateImpactViz, 3000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,268 @@
+<html><head><base href="feedback.html">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoAI: Feedback</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body, html {
+            font-family: 'Roboto', sans-serif;
+            background-color: #0a0a0a;
+            color: #e0e0e0;
+            overflow-x: hidden;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            background: linear-gradient(45deg, #1a1a1a, #2a2a2a);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2em;
+            color: #4CAF50;
+            text-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+        }
+        .nav-links a {
+            color: #e0e0e0;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        .nav-links a:hover {
+            color: #4CAF50;
+        }
+        .hero {
+            height: 30vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: url('/a/444e7f6c-fd0e-44d9-ab0e-8c697123fb55') no-repeat center center;
+            background-size: cover;
+            position: relative;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+        }
+        .hero-content {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        .hero-content h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            font-family: 'Orbitron', sans-serif;
+            color: #4CAF50;
+            text-shadow: 0 0 20px rgba(76, 175, 80, 0.7);
+        }
+        .section {
+            padding: 80px 0;
+        }
+        .feedback-form {
+            background: linear-gradient(45deg, #1a1a1a, #2a2a2a);
+            border-radius: 10px;
+            padding: 40px;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #4CAF50;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background-color: #333;
+            color: #e0e0e0;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .rating {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+        }
+        .rating > input {
+            display: none;
+        }
+        .rating > label {
+            position: relative;
+            width: 1.1em;
+            font-size: 30px;
+            color: #FFD700;
+            cursor: pointer;
+        }
+        .rating > label::before {
+            content: "\2605";
+            position: absolute;
+            opacity: 0;
+        }
+        .rating > label:hover:before,
+        .rating > label:hover ~ label:before {
+            opacity: 1 !important;
+        }
+        .rating > input:checked ~ label:before {
+            opacity: 1;
+        }
+        .rating:hover > input:checked ~ label:before {
+            opacity: 0.4;
+        }
+        footer {
+            background: #1a1a1a;
+            padding: 20px 0;
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2em;
+            }
+            .feedback-form {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">E-Wate-DECENTRALIZED</div>
+            <div class="nav-links">
+                <a href="home.html">Home</a>
+                <a href="solutions.html">Solutions</a>
+                <a href="reuse.html">Reuse</a>
+                <a href="feedback.html">Feedback</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Your Feedback Matters</h1>
+        </div>
+    </section>
+
+    <section id="feedback" class="section">
+        <div class="container">
+            <form class="feedback-form" id="feedbackForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="category">Feedback Category:</label>
+                    <select id="category" name="category" required>
+                        <option value="">Select a category</option>
+                        <option value="general">General Feedback</option>
+                        <option value="solution">Solution Suggestion</option>
+                        <option value="experience">User Experience</option>
+                        <option value="technical">Technical Issue</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="rating">Rate your experience:</label>
+                    <div class="rating">
+                        <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Excellent"></label>
+                        <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Very Good"></label>
+                        <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Good"></label>
+                        <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Fair"></label>
+                        <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Poor"></label>
+                    </div>
+                    <br>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Feedback:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>E-Wate-DECENTRALIZED Innovating E-Waste Solutions. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        gsap.from(".hero-content", {
+            duration: 1,
+            y: 50,
+            opacity: 0,
+            ease: "power3.out"
+        });
+
+        gsap.from(".feedback-form", {
+            duration: 1,
+            y: 50,
+            opacity: 0,
+            ease: "power3.out",
+            delay: 0.5
+        });
+
+        document.getElementById('feedbackForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Here you would typically send the form data to a server
+            // For this example, we'll just show an alert
+            alert('Thank you for your feedback! We appreciate your input.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

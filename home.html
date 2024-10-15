@@ -1,0 +1,292 @@
+<html><head><base href="home.html">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revolutionizing E-Waste Management with AI and Web3</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body, html {
+            font-family: 'Roboto', sans-serif;
+            background-color: #0a0a0a;
+            color: #e0e0e0;
+            overflow-x: hidden;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            background: linear-gradient(45deg, #1a1a1a, #2a2a2a);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2em;
+            color: #4CAF50;
+            text-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+        }
+        .nav-links a {
+            color: #e0e0e0;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        .nav-links a:hover {
+            color: #4CAF50;
+        }
+        #hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        #hero-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .hero-content {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        .hero-content h1 {
+            font-size: 4em;
+            margin-bottom: 20px;
+            font-family: 'Orbitron', sans-serif;
+            color: #4CAF50;
+            text-shadow: 0 0 20px rgba(76, 175, 80, 0.7);
+        }
+        .hero-content p {
+            font-size: 1.2em;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #4CAF50;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #45a049;
+            transform: translateY(-3px);
+        }
+        .section {
+            padding: 100px 0;
+        }
+        .section h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-align: center;
+            font-family: 'Orbitron', sans-serif;
+            color: #4CAF50;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .feature-card {
+            background: linear-gradient(45deg, #1a1a1a, #2a2a2a);
+            border-radius: 10px;
+            padding: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(76, 175, 80, 0.2);
+        }
+        .feature-card h3 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: #4CAF50;
+        }
+        .feature-card p {
+            font-size: 1em;
+            line-height: 1.6;
+        }
+        #ai-demo {
+            height: 400px;
+            background: #1a1a1a;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5em;
+            color: #4CAF50;
+            margin-top: 50px;
+        }
+        footer {
+            background: #1a1a1a;
+            padding: 20px 0;
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5em;
+            }
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">E-Wate-DECENTRALIZED</div>
+            <div class="nav-links">
+                <a href="home.html">Home</a>
+                <a href="solutions.html">Solutions</a>
+                <a href="reuse.html">Reuse</a>
+                <a href="feedback.html">Feedback</a>
+            </div>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <canvas id="hero-canvas"></canvas>
+        <div class="hero-content">
+            <h1>Sustainable E-Waste Solutions</h1>
+            <p>Revolutionizing e-waste management with cutting-edge AI and Web3 technologies.</p>
+            <a href="solutions.html" class="cta-button">Explore Solutions</a>
+        </div>
+    </section>
+
+    <section id="features" class="section">
+        <div class="container">
+            <h2>Our Innovative Approach</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>AI-Powered Recycling</h3>
+                    <p>Utilizing machine learning algorithms to optimize e-waste sorting and recycling processes, maximizing resource recovery.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Web3 Traceability</h3>
+                    <p>Implementing blockchain technology to ensure transparent and secure tracking of e-waste from collection to recycling.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Smart Reuse Strategies</h3>
+                    <p>Developing AI-driven platforms to identify and facilitate the reuse of electronic components, reducing waste generation.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Decentralized Incentives</h3>
+                    <p>Creating a tokenized ecosystem to reward sustainable practices and encourage community participation in e-waste management.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ai-demo" class="section">
+        <div class="container">
+            <h2>AI in Action</h2>
+            <div id="ai-demo">
+                Interactive AI Demo: E-Waste Sorting Simulation
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>E-Wate-DECENTRALIZED Revolutionizing E-Waste Management. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Three.js background animation
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('hero-canvas'), alpha: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+
+        const geometry = new THREE.IcosahedronGeometry(1, 1);
+        const material = new THREE.MeshBasicMaterial({ color: 0x4CAF50, wireframe: true });
+        const icosahedron = new THREE.Mesh(geometry, material);
+        scene.add(icosahedron);
+
+        camera.position.z = 5;
+
+        function animate() {
+            requestAnimationFrame(animate);
+            icosahedron.rotation.x += 0.005;
+            icosahedron.rotation.y += 0.005;
+            renderer.render(scene, camera);
+        }
+        animate();
+
+        // Responsive canvas
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+
+        // GSAP animations
+        gsap.from(".hero-content", {
+            duration: 1,
+            y: 50,
+            opacity: 0,
+            ease: "power3.out"
+        });
+
+        gsap.from(".feature-card", {
+            duration: 1,
+            y: 50,
+            opacity: 0,
+            stagger: 0.2,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".feature-grid",
+                start: "top 80%"
+            }
+        });
+
+        // AI Demo Placeholder
+        const aiDemo = document.getElementById('ai-demo');
+        let demoState = 0;
+        setInterval(() => {
+            demoState = (demoState + 1) % 4;
+            switch(demoState) {
+                case 0:
+                    aiDemo.textContent = "Scanning e-waste...";
+                    break;
+                case 1:
+                    aiDemo.textContent = "Identifying components...";
+                    break;
+                case 2:
+                    aiDemo.textContent = "Assessing recyclability...";
+                    break;
+                case 3:
+                    aiDemo.textContent = "Optimizing recycling process...";
+                    break;
+            }
+        }, 2000);
+    </script>
+</body>
+</html>
